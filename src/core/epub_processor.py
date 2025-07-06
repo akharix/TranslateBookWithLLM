@@ -649,7 +649,7 @@ async def translate_epub_chunks_with_context(chunks, source_language, target_lan
 
 
 async def translate_epub_file(input_filepath, output_filepath,
-                              source_language="English", target_language="French",
+                              source_language="Korean", target_language="English",
                               model_name=DEFAULT_MODEL, chunk_target_lines_arg=MAIN_LINES_PER_CHUNK,
                               cli_api_endpoint=API_ENDPOINT,
                               progress_callback=None, log_callback=None, stats_callback=None,

@@ -51,8 +51,8 @@
                     <div class="form-group">
                         <label>Source Language</label>
                         <select class="form-control" id="sourceLang" onchange="checkCustomSourceLanguage(this)">
+                            <option value="Korean">Korean</option>
                             <option value="Chinese">Chinese</option>
-                            <option value="Italian">Korean</option>
                             <option value="English">English</option>
                             <option value="Other">Other (Specify)</option>
                         </select>
@@ -64,7 +64,7 @@
                         <select class="form-control" id="targetLang" onchange="checkCustomTargetLanguage(this)">
                             <option value="English">English</option>
                             <option value="Chinese">Chinese</option>
-                            <option value="Spanish">Korean</option>
+                            <option value="Korean">Korean</option>
                             <option value="Other">Other (Specify)</option>
                         </select>
                         <input type="text" class="form-control" id="customTargetLang" placeholder="Enter custom target language (e.g., Portuguese)" style="margin-top: 10px; display: none;">
@@ -72,7 +72,7 @@
                      <div class="form-group">
                         <label>Output Filename Pattern</label>
                         <input type="text" class="form-control" id="outputFilenamePattern" value="translated_{originalName}.{ext}" title="Use {originalName} as placeholder for original filename without extension and {ext} for the file extension.">
-                        <small>Example: `translated_{originalName}_to_FR.{ext}`</small>
+                        <small>Example: `translated_{originalName}_to_EN.{ext}`</small>
                     </div>
                 </div>
 

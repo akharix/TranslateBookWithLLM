@@ -1,7 +1,8 @@
 from src.config import TRANSLATE_TAG_IN, TRANSLATE_TAG_OUT, INPUT_TAG_IN, INPUT_TAG_OUT
 
 def generate_translation_prompt(main_content, context_before, context_after, previous_translation_context,
-                               source_language="English", target_language="French", 
+                               source_language="Korean", 
+                               target_language="English", 
                                translate_tag_in=TRANSLATE_TAG_IN, translate_tag_out=TRANSLATE_TAG_OUT,
                                custom_instructions=""):
     """
@@ -67,7 +68,7 @@ def generate_translation_prompt(main_content, context_before, context_after, pre
 
 
 def generate_subtitle_block_prompt(subtitle_blocks, previous_translation_block, 
-                                 source_language="English", target_language="French",
+                                 source_language="English", target_language="English",
                                  translate_tag_in=TRANSLATE_TAG_IN, translate_tag_out=TRANSLATE_TAG_OUT,
                                  custom_instructions=""):
     """
@@ -141,7 +142,7 @@ def generate_subtitle_block_prompt(subtitle_blocks, previous_translation_block,
     return "\n\n".join(part.strip() for part in structured_prompt_parts if part and part.strip()).strip()
 
 
-def generate_post_processing_prompt(translated_text, target_language="French", 
+def generate_post_processing_prompt(translated_text, target_language="English", 
                                   translate_tag_in=TRANSLATE_TAG_IN, translate_tag_out=TRANSLATE_TAG_OUT,
                                   custom_instructions=""):
     """

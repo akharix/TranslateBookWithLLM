@@ -101,7 +101,7 @@ async def generate_translation_request(main_content, context_before, context_aft
         return clean_translated_text(full_raw_response.strip())
 
 
-async def post_process_translation(translated_text, target_language="French", model=DEFAULT_MODEL,
+async def post_process_translation(translated_text, target_language="English", model=DEFAULT_MODEL,
                                  llm_client=None, log_callback=None, custom_instructions="",
                                  tag_map=None):
     """

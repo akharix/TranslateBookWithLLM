@@ -13,7 +13,7 @@ from src.config import DEFAULT_MODEL, MAIN_LINES_PER_CHUNK, API_ENDPOINT, SRT_LI
 
 
 async def translate_text_file_with_callbacks(input_filepath, output_filepath,
-                                             source_language="English", target_language="French",
+                                             source_language="Korean", target_language="English",
                                              model_name=DEFAULT_MODEL, chunk_target_lines_cli=MAIN_LINES_PER_CHUNK,
                                              cli_api_endpoint=API_ENDPOINT,
                                              progress_callback=None, log_callback=None, stats_callback=None,
@@ -131,7 +131,7 @@ async def translate_text_file_with_callbacks(input_filepath, output_filepath,
 
 
 async def translate_srt_file_with_callbacks(input_filepath, output_filepath,
-                                           source_language="English", target_language="French",
+                                           source_language="Korean", target_language="English",
                                            model_name=DEFAULT_MODEL, chunk_target_lines_cli=MAIN_LINES_PER_CHUNK,
                                            cli_api_endpoint=API_ENDPOINT,
                                            progress_callback=None, log_callback=None, stats_callback=None,
@@ -274,7 +274,7 @@ async def translate_srt_file_with_callbacks(input_filepath, output_filepath,
 
 
 async def translate_file(input_filepath, output_filepath,
-                        source_language="English", target_language="French",
+                        source_language="Korean", target_language="English",
                         model_name=DEFAULT_MODEL, chunk_target_size_cli=MAIN_LINES_PER_CHUNK,
                         cli_api_endpoint=API_ENDPOINT,
                         progress_callback=None, log_callback=None, stats_callback=None,
