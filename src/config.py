@@ -11,7 +11,7 @@ load_dotenv()
 
 # Load from environment variables with defaults
 API_ENDPOINT = os.getenv('API_ENDPOINT', 'http://localhost:11434/api/generate')
-DEFAULT_MODEL = os.getenv('DEFAULT_MODEL', 'mistral-small:24b')
+DEFAULT_MODEL = os.getenv('DEFAULT_MODEL', 'gemma3:27b')
 PORT = int(os.getenv('PORT', '5000'))
 MAIN_LINES_PER_CHUNK = int(os.getenv('MAIN_LINES_PER_CHUNK', '25'))
 REQUEST_TIMEOUT = int(os.getenv('REQUEST_TIMEOUT', '60'))
@@ -29,8 +29,8 @@ SRT_LINES_PER_BLOCK = int(os.getenv('SRT_LINES_PER_BLOCK', '5'))
 SRT_MAX_CHARS_PER_BLOCK = int(os.getenv('SRT_MAX_CHARS_PER_BLOCK', '500'))
 
 # Default languages from environment
-DEFAULT_SOURCE_LANGUAGE = os.getenv('DEFAULT_SOURCE_LANGUAGE', 'English')
-DEFAULT_TARGET_LANGUAGE = os.getenv('DEFAULT_TARGET_LANGUAGE', 'French')
+DEFAULT_SOURCE_LANGUAGE = os.getenv('DEFAULT_SOURCE_LANGUAGE', 'Korean')
+DEFAULT_TARGET_LANGUAGE = os.getenv('DEFAULT_TARGET_LANGUAGE', 'English')
 
 # Translation tags
 TRANSLATE_TAG_IN = "<COMPLETED>"
