@@ -14,9 +14,10 @@ def generate_translation_prompt(main_content, context_before, context_after, pre
     source_lang = source_language.upper()
 
     # PROMPT - can be edited for custom usages
+# You are a {target_language} writer
     role_and_instructions_block = f"""
 ## ROLE
-# You are a {target_language} writer.
+# You are a professional writer and translator, specializing in {source_language} and {target_language} novels.
 
 ## TRANSLATION
 + Translate in the author's style
@@ -68,7 +69,7 @@ def generate_translation_prompt(main_content, context_before, context_after, pre
 
 
 def generate_subtitle_block_prompt(subtitle_blocks, previous_translation_block, 
-                                 source_language="English", target_language="English",
+                                 source_language="Korean", target_language="English",
                                  translate_tag_in=TRANSLATE_TAG_IN, translate_tag_out=TRANSLATE_TAG_OUT,
                                  custom_instructions=""):
     """
@@ -90,12 +91,16 @@ def generate_subtitle_block_prompt(subtitle_blocks, previous_translation_block,
     # Enhanced instructions for subtitle translation
     role_and_instructions_block = f"""
 ## ROLE
-# You are a {target_language} subtitle translator and dialogue adaptation specialist.
+# You are a {source_language} - {target_language} subtitle translator and dialogue adaptation specialist.
 
 ## TRANSLATION
 + Translate dialogues naturally for subtitles
-+ Adapt expressions and cultural references for {target_language} viewers
++ Adapt expressions and {source_language} cultural references for {target_language} viewers
 + Keep subtitle length appropriate for reading speed
++ Ensure consistent use of unique names, titles and locations. For example: if a certain character is first translation as "Queen of Waves and Healing", then that name should be used consistently throughout the translation
++ Ensure consistent use of character' genders and formal pronouns
++ Make sure there isn't any untranslated {source_language} characters across the translation
+
 
 ## FORMATING
 + Translate ONLY the text enclosed within the tags "{INPUT_TAG_IN}" and "{INPUT_TAG_OUT}" from {source_lang} into {target_language}
@@ -167,6 +172,9 @@ def generate_post_processing_prompt(translated_text, target_language="English",
 + Enhance fluidity and naturalness while preserving the original meaning
 + Correct any grammatical errors or awkward phrasing
 + Ensure consistency in style and tone
++ Ensure consistency of the translated translated names, titles, locations.
++ Ensure consistent use of formal pronouns and character' genders in the translation
++ Verify technical terminology accuracy
 + Make the text read as if originally written in {target_language}
 
 ## FORMATTING

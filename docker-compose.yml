@@ -1,0 +1,22 @@
+services:
+  
+  translatebook:
+    restart: always    
+    build: 
+      context: .
+      network: host
+    networks:
+     - ml-stack-network
+    expose:
+     - 5000/tcp
+    ports:
+     - 5000:5000/tcp
+    volumes:
+      - ./translated_files:/app/translated_files
+    environment:
+      - PORT=5000
+
+networks:
+  ml-stack-network:
+    external:
+      name: ml-stack

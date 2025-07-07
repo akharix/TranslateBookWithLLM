@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Load from environment variables with defaults
-API_ENDPOINT = os.getenv('API_ENDPOINT', 'http://localhost:11434/api/generate')
+API_ENDPOINT = os.getenv('API_ENDPOINT', 'http://ollama:11434/api/generate')
 DEFAULT_MODEL = os.getenv('DEFAULT_MODEL', 'gemma3:27b')
 PORT = int(os.getenv('PORT', '5000'))
 MAIN_LINES_PER_CHUNK = int(os.getenv('MAIN_LINES_PER_CHUNK', '25'))
